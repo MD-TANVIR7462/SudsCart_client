@@ -15,7 +15,7 @@ const ProductCard = ({ singleProduct }:{singleProduct:Tproduct}) => {
           radius="lg"
           width="100%"
           className="w-full object-cover h-[140px]"
-          src={singleProduct?.image[0]}
+          src={singleProduct?.image}
         />
         <p className="absolute right-2 top-2 bg-white  rounded-full p-2 cursor-pointer group">
           <svg
