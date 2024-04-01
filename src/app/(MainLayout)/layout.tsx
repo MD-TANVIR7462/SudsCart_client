@@ -1,3 +1,4 @@
+import Footer from "@/Components/Shared/Navbar/Footer";
 import NavBarClient from "@/Components/Shared/Navbar/NavBarClient";
 
 const layoutNav = ({
@@ -9,6 +10,7 @@ const layoutNav = ({
     <div >
       <NavBarClient />
       {children}
+      <Footer/>
     </div>
   );
 };

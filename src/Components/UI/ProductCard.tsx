@@ -1,18 +1,21 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Image } from "@nextui-org/react";
+import Link from "next/link";
 import React from "react";
 
 const ProductCard = ({ singleProduct }) => {
   return (
-    <div className="relative w-full sm:w-[80%] mx-auto md:w-full shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300  bg-white   rounded-3xl p-2  my-3 cursor-pointer">
+<Link href={`/dishwashing-items/${singleProduct._id}`}>
+
+<div className="relative w-full sm:w-[80%] mx-auto md:w-full shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300  bg-white   rounded-3xl p-2  my-3 cursor-pointer">
       <div className="overflow-x-hidden rounded-2xl relative">
-      <Image
-                shadow="sm"
-                radius="lg"
-                width="100%"
-                className="w-full object-cover h-[140px]"
-                src={singleProduct?.image[0]}
-              />
+        <Image
+          shadow="sm"
+          radius="lg"
+          width="100%"
+          className="w-full object-cover h-[140px]"
+          src={singleProduct?.image[0]}
+        />
         <p className="absolute right-2 top-2 bg-white  rounded-full p-2 cursor-pointer group">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +59,7 @@ const ProductCard = ({ singleProduct }) => {
         </div>
       </div>
     </div>
+</Link>
   );
 };
 
