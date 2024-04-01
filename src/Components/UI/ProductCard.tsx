@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { Tproduct } from "@/Types/Types";
 import { Image } from "@nextui-org/react";
 import Link from "next/link";
 import React from "react";
 
-const ProductCard = ({ singleProduct }) => {
+const ProductCard = ({ singleProduct }:{singleProduct:Tproduct}) => {
   return (
 <Link href={`/dishwashing-items/${singleProduct._id}`}>
 

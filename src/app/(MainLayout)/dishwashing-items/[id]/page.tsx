@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 const DetailsPage = ({ params }) => {
-  console.log(params);
+
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
       <div className="container px-5 py-24 mx-auto">
@@ -89,7 +89,7 @@ const DetailsPage = ({ params }) => {
 
             <span className="flex  items-center mt-4">
               <button className=" text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">
-                Button
+                Buy
               </button>
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                 <svg
