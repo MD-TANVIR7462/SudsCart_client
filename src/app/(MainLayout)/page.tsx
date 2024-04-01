@@ -1,3 +1,4 @@
+import Category from "@/Components/UI/Category";
 import FlashSell from "@/Components/UI/FlashSell";
 import React from "react";
 
@@ -464,7 +465,8 @@ const HomePage = async () => {
     <div>
       {/* <Hero /> */}
       <div className="max-w-[1470px] mx-auto">
-        <FlashSell data={flashData}></FlashSell>
+        <FlashSell data={flashData}/>
+        <Category/>
       </div>
     </div>
   );
