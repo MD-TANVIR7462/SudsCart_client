@@ -3,7 +3,6 @@
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import Link from "next/link";
 
-
 const Category = () => {
   const categoryData = [
     {
@@ -41,16 +40,16 @@ const Category = () => {
 
   return (
     <>
-      <div className="mt-24">
+      <div className="my-24">
         <p className="text-gray-900 text-3xl font-bold mb-8 ">Top Categories</p>
 
-        <div className="md:w-full w-[85%] gap-6 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6  mx-auto shadow-xl">
+        <div className="md:w-full w-[85%] gap-6 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6  mx-auto ">
           {categoryData.map((item, index) => (
             <Link href={`/dishwashing-items?category=${item.route}`}>
-              <Card shadow="sm" key={item.route}>
+              <Card shadow="sm" key={item.route} className="shadow-lg">
                 <CardBody className="overflow-visible p-0">
                   <Image
-                    shadow="sm"
+                    shadow="md"
                     radius="lg"
                     width="100%"
                     alt={item.name}

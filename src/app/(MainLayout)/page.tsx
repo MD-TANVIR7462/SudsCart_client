@@ -1,5 +1,6 @@
 import Category from "@/Components/UI/Category";
-import FlashSell from "@/Components/UI/FlashSell";
+import FlasAndProduct from "@/Components/UI/flasAndProduct";
+
 import React from "react";
 
 const HomePage = async () => {
@@ -464,9 +465,18 @@ const HomePage = async () => {
   return (
     <div>
       {/* <Hero /> */}
-      <div className="max-w-[1470px] mx-auto">
-        <FlashSell data={flashData}/>
-        <Category/>
+      <div className="max-w-[1370px] mx-auto">
+        <FlasAndProduct
+          data={flashData}
+          Sectiontitle={"Flash Sales"}
+          route={"/flash-sale"}
+        />
+        <Category />
+        <FlasAndProduct
+          data={flashData}
+          Sectiontitle={"Trending Products"}
+          route={"/category"}
+        />
       </div>
     </div>
   );
