@@ -10,15 +10,19 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.10",
+    "embla-carousel-react": "^8.0.0",
     "framer-motion": "^11.0.24",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-slick": "^0.23.13",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",

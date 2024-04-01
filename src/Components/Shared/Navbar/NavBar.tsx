@@ -28,7 +28,7 @@ export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
       shouldHideOnScroll
       height="90px"
     >
-      <NavbarContent className="sm:hidden" justify="start">
+      <NavbarContent className="sm:hidden  " justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />
@@ -37,14 +37,14 @@ export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          <p className="font-bold  text-green">ACME</p>
+          <p className="font-bold  text-green text-lg">SudsCart</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6  w-full" justify="center">
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          <p className="font-bold  text-green">ACME</p>
+          <p className="font-bold  text-green text-lg">SudsCart</p>
         </NavbarBrand>
 
         {menuItems.map((item, index) => (
@@ -71,7 +71,7 @@ export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={index}>
-            <Link className="w-full" href={`/${item.route}`} >
+            <Link className="w-full" href={`/${item.route}`}>
               {item.name}
             </Link>
           </NavbarMenuItem>
