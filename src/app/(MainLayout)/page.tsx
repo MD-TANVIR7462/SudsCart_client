@@ -8,7 +8,7 @@ const HomePage = async () => {
     "http://localhost:5000/api/v1/flashproduct",
     {
       next: {
-        revalidate: 20,
+        revalidate: 30,
       },
     }
   );
@@ -18,7 +18,7 @@ const HomePage = async () => {
     "http://localhost:5000/api/v1/topRatedProducts",
     {
       next: {
-        revalidate: 20,
+        revalidate: 30,
       },
     }
   );

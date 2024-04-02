@@ -1,5 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
-const DetailsPage = ({ params }) => {
+const DetailsPage = async ({ params }: any) => {
+  const res = await fetch(`http://localhost:5000/api/v1/products/${params.id}`);
+  const data = await res.json();
+
+  // "ratings": 4.2,
+  // "category": "Dish Brush",
+
+  console.log(data, params.id);
 
   return (
     <section className="text-gray-700 body-font overflow-hidden bg-white">
@@ -8,65 +15,22 @@ const DetailsPage = ({ params }) => {
           <img
             alt="ecommerce"
             className="lg:w-1/2 w-full h-[400px] object-cover object-center rounded border border-gray-200"
-            src="https://i.ibb.co/R008wxb/Screenshot-18.png"
+            src={data?.image}
           />
 
           <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 ">
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
-              The Catcher in the Rye
+              {data?.name}
             </h1>
             <div className="flex mb-4">
-              <span className="flex items-center">
+              <span className="flex items-center gap-2">
+                {data?.ratings}
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-green-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-green-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-green-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-green-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-4 h-4 text-green-500"
                   viewBox="0 0 24 24"
                 >
@@ -74,17 +38,12 @@ const DetailsPage = ({ params }) => {
                 </svg>
               </span>
             </div>
-            <p className="leading-relaxed overflow-y-auto h-[120px] mb-6">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean shorts keytar banjo tattooed umami
-              cardigan.
+            <p className="leading-relaxed overflow-y-auto h-[120px] ">
+              {data?.description}
             </p>
-
+            <p className="font-semibold"> {data?.category}</p>
             <span className="title-font font-medium text-2xl text-gray-90">
-              $58.00
+              {data?.price}
             </span>
 
             <span className="flex  items-center mt-4">
@@ -94,9 +53,9 @@ const DetailsPage = ({ params }) => {
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                 <svg
                   fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >
