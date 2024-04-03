@@ -7,7 +7,7 @@ const FlasAndProduct = ({ data, Sectiontitle, route }: TflasProduct) => {
     <>
       <div className="my-20">
         <div className="flex justify-between w-full">
-          <p className="text-gray-900 text-3xl font-bold mb-8">
+          <p className="text-white text-3xl font-bold mb-8">
             {Sectiontitle}
           </p>
           <Link href={route}>

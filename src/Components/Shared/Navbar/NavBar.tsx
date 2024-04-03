@@ -13,7 +13,7 @@ export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
   const menuItems = [
     { name: "Home", route: "/" },
     { name: "Categories", route: "categories" },
-    { name: "Products", route: "products" },
+    { name: "Products", route: "dishwashing-items" },
     { name: "Flash Sale", route: "flash-sale" },
     { name: "About Us", route: "about" },
     { name: "Contact Us", route: "contact" },

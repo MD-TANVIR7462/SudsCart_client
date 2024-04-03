@@ -41,7 +41,7 @@ const Category = () => {
   return (
     <>
       <div className="my-24">
-        <p className="text-gray-900 text-3xl font-bold mb-8 ">Top Categories</p>
+        <p className="text-white text-3xl font-bold mb-8 ">Top Categories</p>
 
         <div className="md:w-full w-[85%] gap-6 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6  mx-auto ">
           {categoryData.map((item, index) => (
