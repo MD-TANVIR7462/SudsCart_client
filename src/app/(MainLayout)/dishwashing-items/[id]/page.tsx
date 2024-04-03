@@ -3,10 +3,7 @@ const DetailsPage = async ({ params }: any) => {
   const res = await fetch(`http://localhost:5000/api/v1/products/${params.id}`);
   const data = await res.json();
 
-  // "ratings": 4.2,
-  // "category": "Dish Brush",
 
-  console.log(data, params.id);
 
   return (
     <section className=" overflow-hidden  text-white">

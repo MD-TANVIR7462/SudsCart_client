@@ -7,33 +7,33 @@ const Category = () => {
   const categoryData = [
     {
       name: "Dish Soap",
-      route: "dish-soap",
+      route: "Dish Soap",
       image: "https://i.ibb.co/R008wxb/Screenshot-18.png",
     },
     {
       name: "Dishwasher Detergent",
-      route: "dishwasher-detergent",
+      route: "Dishwasher Detergent",
       image: "https://i.ibb.co/KN0SyLn/tomato-lotion-body-skin-care.jpg",
     },
     {
       name: "Dish Brush",
-      route: "dish-brush",
+      route: "Dish Brush",
       image: "https://i.ibb.co/jR2gGnk/composition-cleaning-objects.jpg",
     },
     {
       name: "Dish Rack",
-      route: "dish-rack",
+      route: "Dish Rack",
       image: "https://i.ibb.co/wW7d2XK/Screenshot-1.png",
     },
     {
       name: "Dishwashing Accessories",
-      route: "dishwashing-accessories",
+      route: "Dishwashing Accessories",
       image:
         "https://i.ibb.co/WzRfx0p/colorful-composition-with-set-bright-cleaning-sponges-cleaning-agent-cleaning-service-concept-backgr.jpg",
     },
     {
       name: "Kitchen Cleaning Sponges",
-      route: "kitchen-sponges",
+      route: "Kitchen Cleaning Sponges",
       image: "https://i.ibb.co/HKdkC4J/kitchen-sponge-pink-background.jpg",
     },
   ];

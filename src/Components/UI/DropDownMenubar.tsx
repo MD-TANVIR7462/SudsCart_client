@@ -1,13 +1,14 @@
 "use client";
 import { Radio, RadioGroup } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import React, { useEffect, useState } from "react";
 
 const DropDownMenubar = () => {
   const [open, setOpen] = useState(false);
+  const searchParams = useSearchParams();
   const router = useRouter();
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(searchParams.get("category") || "");
   const [rating, setRating] = useState("");
   const [price, setPrice] = useState("");
   const handleCategoryChange = (value: string) => {
@@ -21,7 +22,6 @@ const DropDownMenubar = () => {
   const handlePriceChange = (value: string) => {
     setPrice(value);
   };
-  console.log(category, rating, price);
 
   useEffect(() => {
     router.push(
@@ -50,23 +50,24 @@ const DropDownMenubar = () => {
                   label="Select Category"
                   className="text-white"
                   color="secondary"
-                  defaultValue=""
+                  defaultValue={category}
                   onChange={(e) => handleCategoryChange(e.target.value)}
                 >
-                  <Radio value="dish-soap" className="text-white">
+                  <Radio value="Dish Soap" className="text-white">
                     Dish Soap
                   </Radio>
-                  <Radio value="dishwasher-detergent">
+                  <Radio value="Dishwasher Detergent">
                     Dishwasher Detergent
                   </Radio>
-                  <Radio value="dish-brush">Dish Brush</Radio>
-                  <Radio value="dish-rack">Dish Rack</Radio>
-                  <Radio value="dishwashing-accessories">
+                  <Radio value="Dish Brush">Dish Brush</Radio>
+                  <Radio value="Dish Rack">Dish Rack</Radio>
+                  <Radio value="Dishwashing Accessories">
                     Dishwashing Accessories
                   </Radio>
-                  <Radio value="kitchen-cleaning-sponges">
+                  <Radio value="Kitchen Cleaning Sponges">
                     Kitchen Cleaning Sponges
                   </Radio>
+                  <Radio value="">All</Radio>
                 </RadioGroup>
                 <div className="border border-b-gray-500  my-3" />
 
@@ -74,7 +75,7 @@ const DropDownMenubar = () => {
                   label="Select Price Range"
                   className="text-white"
                   color="secondary"
-                  defaultValue=""
+                  defaultValue={price}
                   onChange={(e) => handlePriceChange(e.target.value)}
                 >
                   <Radio value="5-10" className="text-white">
@@ -86,26 +87,32 @@ const DropDownMenubar = () => {
                   <Radio value="21-50" className="text-white">
                     $21 - $50
                   </Radio>
+                  <Radio value="" className="text-white">
+                    All
+                  </Radio>
                 </RadioGroup>
                 <div className="border border-b-gray-500  my-3" />
                 <RadioGroup
                   label="Select Ratings"
                   className="text-white"
                   color="secondary"
-                  defaultValue=""
+                  defaultValue={rating}
                   onChange={(e) => handleRatingChange(e.target.value)}
                 >
-                  <Radio value="2star" className="text-white">
+                  <Radio value="2-3" className="text-white">
                     2 Star
                   </Radio>
-                  <Radio value="3star" className="text-white">
+                  <Radio value="3-4" className="text-white">
                     3 Star
                   </Radio>
-                  <Radio value="4star" className="text-white">
+                  <Radio value="4-5" className="text-white">
                     4 Star
                   </Radio>
-                  <Radio value="5star" className="text-white">
+                  <Radio value="5-6" className="text-white">
                     5 Star
+                  </Radio>
+                  <Radio value="" className="text-white">
+                    All
                   </Radio>
                 </RadioGroup>
               </div>

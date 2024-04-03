@@ -22,8 +22,10 @@ const HomePage = async () => {
       },
     }
   );
-  const TrandingData = await trandingProducts.json();
 
+
+
+  const TrandingData = await trandingProducts.json();
   const flashData = FlashData.slice(0, 8);
   const tradingData = TrandingData.slice(0, 8);
 
@@ -40,7 +42,7 @@ const HomePage = async () => {
         <FlasAndProduct
           data={tradingData}
           Sectiontitle={"Trending Products"}
-          route={"/category"}
+          route={"/dishwashing-items"}
         />
       </div>
     </div>
