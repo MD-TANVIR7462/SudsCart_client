@@ -31,7 +31,7 @@ const HomePage = async () => {
   return (
     <div>
       <HeroSection />
-      <div className="w-[95%] md:w-full max-w-[1370px]  mx-auto">
+      <div className="w-[90%] sm:w-[95%] md:w-[90%] lg:w-[95%] xl:w-full max-w-[1370px]  mx-auto">
         <FlasAndProduct
           data={flashData}
           Sectiontitle={"Flash Sales"}

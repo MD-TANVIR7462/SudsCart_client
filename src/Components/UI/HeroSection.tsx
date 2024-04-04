@@ -13,16 +13,17 @@ const HeroSection = () => {
           </div>
           <span className="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
           <div className="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
-            <h1 className="text-2xl leading-tight sm:text-3xl md:text-5xl xl:text-6xl font-bold text-gray-900">
-              Social Media{" "}
+            <h1 className="text-2xl leading-tight sm:text-3xl md:text-3xl xl:text-5xl font-bold text-gray-900">
+              Discover the Perfect{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600">
-                Marketing
+                Dishwashing
               </span>
-              is the Best Ever.
+              Products for a Spotless Clean!
             </h1>
             <p className="md:mt-8 text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-              repellat
+              Transform Your Kitchen Cleanup Routine with Cutting-Edge
+              Dishwashing Innovations! Discover Superior Performance and
+              Convenience in Every Wash
             </p>
             <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
               <div className="flex sm:flex-row flex-col gap-5 w-full">

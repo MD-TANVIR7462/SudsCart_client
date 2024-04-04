@@ -41,7 +41,7 @@ const Category = () => {
 
   return (
     <>
-      <div className="my-24">
+      <div className="my-16 sm:my-24">
         <p className="text-black text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-center md:text-start">
           Top Categories
         </p>

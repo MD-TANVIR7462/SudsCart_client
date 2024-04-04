@@ -30,8 +30,8 @@ const DropDownMenubar = () => {
   }, [category, price, rating, router]);
 
   return (
-    <div className="flex items-center justify-center relative z-50">
-      <div className="-mt-16">
+    <div className="flex items-center justify-center relative ">
+      <div className="-mt-8 md:-mt-16">
         <div className="relative ">
           <button
             className="cursor-pointer"
@@ -41,14 +41,14 @@ const DropDownMenubar = () => {
             <p className="relative inline-block text-sm font-medium text-green-500 group active:text-green-500 focus:outline-none focus:ring">
               <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-green-500 group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
-              <span className="relative block px-8 py-3 bg-gray-100 border border-current">
+              <span className="relative block px-4 md:px-8 py-2 md:py-3 bg-gray-100 border border-current">
                 Filter By
               </span>
             </p>
           </button>
           {/* Conditional rendering of the dropdown */}
           {open && (
-            <div className="dropdown-menu origin-top-right bg-white border-2 border-gray-400 bg-opacity-70 shadow-2xl  backdrop-blur-lg transition-transform transform ease-in-out rounded-lg  ring-1 ring-black ring-opacity-5 mt-2 w-72 absolute right-0">
+            <div className="z-10 dropdown-menu origin-top-right bg-white border-2 border-gray-400 bg-opacity-70 shadow-2xl  backdrop-blur-lg transition-transform transform ease-in-out rounded-lg  ring-1 ring-black ring-opacity-5 mt-2 w-72 absolute right-0">
               <div className=" p-5  ">
                 <RadioGroup
                   label="Select Category"

@@ -33,7 +33,7 @@ const AllProductsPage = async () => {
                       height={100}
                       width={100}
                       alt="image"
-                      className="rounded-xl h-12 w-12 object-cover sm:block hidden"
+                      className="rounded-xl h-12 w-12 object-cover "
                       src={SingleData?.image}
                     />
                   </div>
