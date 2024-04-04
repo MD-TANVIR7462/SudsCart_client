@@ -42,7 +42,7 @@ const DropDownMenubar = () => {
               <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-green-500 group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
               <span className="relative block px-8 py-3 bg-gray-100 border border-current">
-                View All
+               Filter By
               </span>
             </p>
           </button>

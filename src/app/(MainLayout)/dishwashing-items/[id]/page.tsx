@@ -1,7 +1,23 @@
+import { Tproduct } from "@/Types/Types";
 import Image from "next/image";
 
+export const genarateStaticParams = async () => {
+  const res = await fetch(
+    "http://localhost:5000/api/v1/products?category=&price=&rating="
+  );
+  const products = await res.json();
+  return products.slice(0, 10).map((sinGleItem: Tproduct) => ({
+    id: sinGleItem._id,
+  }));
+};
+
 const DetailsPage = async ({ params }: any) => {
-  const res = await fetch(`http://localhost:5000/api/v1/products/${params.id}`);
+  const res = await fetch(
+    `http://localhost:5000/api/v1/products/${params.id}`,
+    {
+      cache: "no-store",
+    }
+  );
   const data = await res.json();
 
   return (
