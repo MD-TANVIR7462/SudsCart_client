@@ -1,8 +1,12 @@
 import DropDownMenubar from "@/Components/UI/DropDownMenubar";
 import ProductCard from "@/Components/UI/ProductCard";
-import { Tproduct } from "@/Types/Types";
+import { SearchParams, Tproduct } from "@/Types/Types";
 
-const ALlProductPage = async ({ searchParams }) => {
+const ALlProductPage = async ({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) => {
   const allproduct = await fetch(
     `http://localhost:5000/api/v1/products?category=${searchParams.category}&price=${searchParams.price}&rating=${searchParams.rating}`,
     {

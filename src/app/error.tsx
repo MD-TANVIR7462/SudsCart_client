@@ -1,6 +1,6 @@
 "use client";
 
-const error = ({ error, reset }) => {
+const error = ({ error, reset }: { error: any; reset: any }) => {
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center bg-gray-200/60">
       <h1 className="text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 tracking-widest">

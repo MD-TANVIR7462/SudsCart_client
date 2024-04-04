@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-   .text-green{
-      @apply text-[#66cc33]
-   }
+@layer components {
+  .text-green {
+    @apply text-[#66cc33];
+  }
 }

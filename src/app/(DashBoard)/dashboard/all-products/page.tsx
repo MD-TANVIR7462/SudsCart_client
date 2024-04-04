@@ -1,7 +1,7 @@
+import { Tproduct } from "@/Types/Types";
 import { Eye, Trash } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+
 
 const AllProductsPage = async () => {
   const products = await fetch("http://localhost:5000/api/v1/products", {
@@ -22,7 +22,7 @@ const AllProductsPage = async () => {
             </tr>
           </thead>
           <tbody>
-            {data?.map((SingleData) => (
+            {data?.map((SingleData: Tproduct) => (
               <tr
                 key={SingleData?._id}
                 className="border border-gray-600  overflow-x-auto w-full  "

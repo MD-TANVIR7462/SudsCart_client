@@ -9,7 +9,13 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 
-export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
+export default function NavBar({
+  setIsMenuOpen,
+  isMenuOpen,
+}: {
+  setIsMenuOpen: any;
+  isMenuOpen: boolean;
+}) {
   const menuItems = [
     { name: "Home", route: "/" },
     { name: "Categories", route: "categories" },
@@ -37,14 +43,18 @@ export default function NavBar({ setIsMenuOpen, isMenuOpen }) {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          <p className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-lg">SudsCart</p>
+          <p className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-lg">
+            SudsCart
+          </p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-6  w-full" justify="center">
         <NavbarBrand>
           {/* <AcmeLogo /> */}
-          <p className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-lg">SudsCart</p>
+          <p className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-lg">
+            SudsCart
+          </p>
         </NavbarBrand>
 
         {menuItems.map((item, index) => (

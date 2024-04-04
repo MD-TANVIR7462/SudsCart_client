@@ -1,7 +1,6 @@
 import Category from "@/Components/UI/Category";
 import HeroSection from "@/Components/UI/HeroSection";
 import FlasAndProduct from "@/Components/UI/flasAndProduct";
-import { error } from "console";
 
 import React from "react";
 
@@ -28,9 +27,6 @@ const HomePage = async () => {
   const TrandingData = await trandingProducts.json();
   const flashData = FlashData.slice(0, 8);
   const tradingData = TrandingData.slice(0, 8);
-
-
-
 
   return (
     <div>

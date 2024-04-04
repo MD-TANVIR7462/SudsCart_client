@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Tproduct } from "@/Types/Types";
 import Image from "next/image";
 

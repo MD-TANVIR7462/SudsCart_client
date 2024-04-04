@@ -33,16 +33,16 @@ const DropDownMenubar = () => {
     <div className="flex items-center justify-center relative z-50">
       <div className="-mt-16">
         <div className="relative ">
-          <button 
-              className="cursor-pointer"
-              onClick={() => setOpen(!open)}
-              aria-expanded={open ? "true" : "false"}
+          <button
+            className="cursor-pointer"
+            onClick={() => setOpen(!open)}
+            aria-expanded={open ? "true" : "false"}
           >
             <p className="relative inline-block text-sm font-medium text-green-500 group active:text-green-500 focus:outline-none focus:ring">
               <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-green-500 group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
               <span className="relative block px-8 py-3 bg-gray-100 border border-current">
-               Filter By
+                Filter By
               </span>
             </p>
           </button>

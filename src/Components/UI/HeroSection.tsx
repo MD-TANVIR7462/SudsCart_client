@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 
 import SlideControl from "./SlideControl";
 
@@ -22,7 +22,7 @@ const HeroSection = () => {
             </h1>
             <p className="md:mt-8 text-gray-700">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
-              repellat 
+              repellat
             </p>
             <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0">
               <div className="flex sm:flex-row flex-col gap-5 w-full">

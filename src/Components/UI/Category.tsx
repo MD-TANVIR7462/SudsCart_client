@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 "use client";
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import Image from "next/image";
@@ -41,11 +42,13 @@ const Category = () => {
   return (
     <>
       <div className="my-24">
-        <p className="text-black text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-center md:text-start">Top Categories</p>
+        <p className="text-black text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-center md:text-start">
+          Top Categories
+        </p>
 
         <div className="md:w-full w-[85%] gap-6 grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-6  mx-auto ">
           {categoryData.map((item, index) => (
-            // eslint-disable-next-line react/jsx-key
+          
             <Link
               href={`/dishwashing-items?category=${item.route}&price=&rating=`}
             >

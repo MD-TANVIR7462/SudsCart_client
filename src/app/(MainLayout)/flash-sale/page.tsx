@@ -5,9 +5,7 @@ const FlashSalePage = async () => {
   const flashProducts = await fetch(
     "http://localhost:5000/api/v1/flashproduct",
     {
-      next: {
-        revalidate: 30,
-      },
+      cache: "no-store",
     }
   );
   const FlashData = await flashProducts.json();
