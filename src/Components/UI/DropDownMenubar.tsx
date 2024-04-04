@@ -32,19 +32,23 @@ const DropDownMenubar = () => {
   return (
     <div className="flex items-center justify-center relative z-50">
       <div className="-mt-16">
-        <div className="relative">
-          <button
-            className="group h-12 w-32 overflow-hidden rounded-2xl bg-green-500 text-lg font-bold text-white  top-5"
-            onClick={() => setOpen(!open)}
-            aria-expanded={open ? "true" : "false"}
+        <div className="relative ">
+          <button 
+              className="cursor-pointer"
+              onClick={() => setOpen(!open)}
+              aria-expanded={open ? "true" : "false"}
           >
-            Filter
-            <div className="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
-          </button>
+            <p className="relative inline-block text-sm font-medium text-green-500 group active:text-green-500 focus:outline-none focus:ring">
+              <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-green-500 group-hover:translate-y-0 group-hover:translate-x-0"></span>
 
+              <span className="relative block px-8 py-3 bg-gray-100 border border-current">
+                View All
+              </span>
+            </p>
+          </button>
           {/* Conditional rendering of the dropdown */}
           {open && (
-            <div className="dropdown-menu origin-top-right bg-white border-2 border-white bg-opacity-75  backdrop-blur-lg transition-transform transform ease-in-out rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 mt-2 w-72 absolute right-0">
+            <div className="dropdown-menu origin-top-right bg-white border-2 border-gray-400 bg-opacity-70 shadow-2xl  backdrop-blur-lg transition-transform transform ease-in-out rounded-lg  ring-1 ring-black ring-opacity-5 mt-2 w-72 absolute right-0">
               <div className=" p-5  ">
                 <RadioGroup
                   label="Select Category"
@@ -53,7 +57,7 @@ const DropDownMenubar = () => {
                   defaultValue={category}
                   onChange={(e) => handleCategoryChange(e.target.value)}
                 >
-                  <Radio value="Dish Soap" className="text-white">
+                  <Radio value="Dish Soap" className="text-black">
                     Dish Soap
                   </Radio>
                   <Radio value="Dishwasher Detergent">
@@ -73,45 +77,45 @@ const DropDownMenubar = () => {
 
                 <RadioGroup
                   label="Select Price Range"
-                  className="text-white"
+                  className="text-black"
                   color="secondary"
                   defaultValue={price}
                   onChange={(e) => handlePriceChange(e.target.value)}
                 >
-                  <Radio value="5-10" className="text-white">
+                  <Radio value="5-10" className="text-black">
                     $0 - $10
                   </Radio>
-                  <Radio value="11-20" className="text-white">
+                  <Radio value="11-20" className="text-black">
                     $11 - $20
                   </Radio>
-                  <Radio value="21-50" className="text-white">
+                  <Radio value="21-50" className="text-black">
                     $21 - $50
                   </Radio>
-                  <Radio value="" className="text-white">
+                  <Radio value="" className="text-black">
                     All
                   </Radio>
                 </RadioGroup>
                 <div className="border border-b-gray-500  my-3" />
                 <RadioGroup
                   label="Select Ratings"
-                  className="text-white"
+                  className="text-black"
                   color="secondary"
                   defaultValue={rating}
                   onChange={(e) => handleRatingChange(e.target.value)}
                 >
-                  <Radio value="2-3" className="text-white">
+                  <Radio value="2-3" className="text-black">
                     2 Star
                   </Radio>
-                  <Radio value="3-4" className="text-white">
+                  <Radio value="3-4" className="text-black">
                     3 Star
                   </Radio>
-                  <Radio value="4-5" className="text-white">
+                  <Radio value="4-5" className="text-black">
                     4 Star
                   </Radio>
-                  <Radio value="5-6" className="text-white">
+                  <Radio value="5-6" className="text-black">
                     5 Star
                   </Radio>
-                  <Radio value="" className="text-white">
+                  <Radio value="" className="text-black">
                     All
                   </Radio>
                 </RadioGroup>

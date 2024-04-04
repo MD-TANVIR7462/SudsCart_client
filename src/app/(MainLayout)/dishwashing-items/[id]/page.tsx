@@ -1,16 +1,17 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 const DetailsPage = async ({ params }: any) => {
   const res = await fetch(`http://localhost:5000/api/v1/products/${params.id}`);
   const data = await res.json();
 
-
-
   return (
-    <section className=" overflow-hidden  text-white">
-      <div className="container px-5  my-12 py-16 mx-auto">
+    <section className=" overflow-hidden  text-black ">
+      <div className="container px-5 bg-white shadow-2xl rounded-xl  my-12 py-16 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
-          <img
-            alt="ecommerce"
+          <Image
+            width={400}
+            height={400}
+            alt={data?.name}
             className="lg:w-1/2 w-full h-[400px] object-cover object-center rounded "
             src={data?.image}
           />
@@ -44,7 +45,7 @@ const DetailsPage = async ({ params }: any) => {
             </span>
 
             <span className="flex  items-center mt-4">
-              <button className=" text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">
+              <button className=" text-black bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">
                 Buy
               </button>
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">

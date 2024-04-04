@@ -7,10 +7,10 @@ const layoutNav = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div >
+    <div>
       <NavBarClient />
       {children}
-      <Footer/>
+      <Footer />
     </div>
   );
 };

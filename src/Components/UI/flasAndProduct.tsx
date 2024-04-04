@@ -7,13 +7,18 @@ const FlasAndProduct = ({ data, Sectiontitle, route }: TflasProduct) => {
     <>
       <div className="my-20">
         <div className="flex justify-between w-full">
-          <p className="text-white text-3xl font-bold mb-8">
+          <p className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-3xl font-bold mb-8">
             {Sectiontitle}
           </p>
           <Link href={route}>
-            <button className="group relative h-12 w-32 overflow-hidden rounded-2xl bg-green-500 text-lg font-bold text-white">
-              View All
-              <div className="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+            <button className="">
+              <p className="relative inline-block text-sm font-medium text-green-500 group active:text-green-500 focus:outline-none focus:ring">
+                <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-green-500 group-hover:translate-y-0 group-hover:translate-x-0"></span>
+
+                <span className="relative block px-8 py-3 bg-gray-100 border border-current">
+                  View All
+                </span>
+              </p>
             </button>
           </Link>
         </div>

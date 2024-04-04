@@ -1,4 +1,5 @@
 import Category from "@/Components/UI/Category";
+import HeroSection from "@/Components/UI/HeroSection";
 import FlasAndProduct from "@/Components/UI/flasAndProduct";
 
 import React from "react";
@@ -23,15 +24,13 @@ const HomePage = async () => {
     }
   );
 
-
-
   const TrandingData = await trandingProducts.json();
   const flashData = FlashData.slice(0, 8);
   const tradingData = TrandingData.slice(0, 8);
 
   return (
     <div>
-      {/* <Hero /> */}
+      <HeroSection />
       <div className="max-w-[1370px] mx-auto">
         <FlasAndProduct
           data={flashData}
@@ -42,7 +41,7 @@ const HomePage = async () => {
         <FlasAndProduct
           data={tradingData}
           Sectiontitle={"Trending Products"}
-          route={"/dishwashing-items"}
+          route={"/dishwashing-items/?category=&price=&rating="}
         />
       </div>
     </div>
