@@ -3,7 +3,7 @@ import { Tproduct } from "@/Types/Types";
 
 const FlashSalePage = async () => {
   const flashProducts = await fetch(
-    "http://localhost:5000/api/v1/flashproduct",
+    "https://dishwasing-server.vercel.app/api/v1/flashproduct",
     {
       cache: "no-store",
     }

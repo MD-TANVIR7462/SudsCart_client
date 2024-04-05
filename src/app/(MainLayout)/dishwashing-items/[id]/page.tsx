@@ -1,12 +1,9 @@
 import { Tproduct } from "@/Types/Types";
 import Image from "next/image";
 
-
-
-
 export const generateStaticParams = async () => {
   const res = await fetch(
-    "http://localhost:5000/api/v1/products?category=&price=&rating="
+    "https://dishwasing-server.vercel.app/api/v1/products?category=&price=&rating="
   );
   const products = await res.json();
   return products.slice(0, 10).map((sinGleItem: Tproduct) => ({
@@ -14,13 +11,9 @@ export const generateStaticParams = async () => {
   }));
 };
 
-
-
-
-
 const DetailsPage = async ({ params }: { params: { id: string } }) => {
   const res = await fetch(
-    `http://localhost:5000/api/v1/products/${params.id}`,
+    `https://dishwasing-server.vercel.app/api/v1/products/${params.id}`,
     {
       cache: "no-store",
     }

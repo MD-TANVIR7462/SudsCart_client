@@ -4,7 +4,7 @@ import Image from "next/image";
 
 
 const AllProductsPage = async () => {
-  const products = await fetch("http://localhost:5000/api/v1/products", {
+  const products = await fetch("https://dishwasing-server.vercel.app/api/v1/products", {
     cache: "no-store",
   });
   const data = await products.json();

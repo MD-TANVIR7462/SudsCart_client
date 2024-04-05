@@ -8,7 +8,7 @@ const ALlProductPage = async ({
   searchParams: SearchParams;
 }) => {
   const allproduct = await fetch(
-    `http://localhost:5000/api/v1/products?category=${searchParams.category}&price=${searchParams.price}&rating=${searchParams.rating}`,
+    `https://dishwasing-server.vercel.app/api/v1/products?category=${searchParams.category}&price=${searchParams.price}&rating=${searchParams.rating}`,
     {
       cache: "no-store",
     }
