@@ -6,6 +6,7 @@ import React from "react";
 
 const ProductCard = ({ singleProduct }: { singleProduct: Tproduct }) => {
   return (
+   <>
     <Link href={`/dishwashing-items/${singleProduct._id}`}>
       <div className="text-black relative   via-30% to-green-600 bg-white  mx-auto w-[95%] sm:w-full shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300    rounded-xl p-2  my-3 cursor-pointer">
         <div className="overflow-x-hidden rounded-2xl relative">
@@ -56,7 +57,7 @@ const ProductCard = ({ singleProduct }: { singleProduct: Tproduct }) => {
           </div>
         </div>
       </div>
-    </Link>
+    </Link></>
   );
 };
 
