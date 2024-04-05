@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="w-full text-gray-700 shadow-xl shadow-blue-950 body-font">
         <div className="container flex flex-col flex-wrap px-5 py-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
           <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-            <p className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
+            <div className="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start">
             <p className="font-bold  text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-xl">
             SudsCart
           </p>
-            </p>
+            </div>
             <p className="mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600">
               Design and Code || Tanvir!
             </p>

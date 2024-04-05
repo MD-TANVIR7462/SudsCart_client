@@ -11,7 +11,7 @@ const FlashSalePage = async () => {
   const FlashData = await flashProducts.json();
 
   return (
-    <div className="my-16 md:my-20  mx-auto ">
+    <div className="my-16 md:my-20 w-[90%] sm:w-[95%] md:w-[90%] lg:w-[95%] xl:w-full max-w-[1370px] mx-auto ">
      
         <p className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-3xl font-bold mb-8">
           Flash Sales
