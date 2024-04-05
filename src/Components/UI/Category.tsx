@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-"use client";
+
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -40,7 +40,7 @@ const Category = () => {
   ];
 
   return (
-    <>
+   
       <div className="my-16 sm:my-24">
         <p className="text-black text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600 text-center md:text-start">
           Top Categories
@@ -70,7 +70,7 @@ const Category = () => {
           ))}
         </div>
       </div>
-    </>
+
   );
 };
 

@@ -1,10 +1,12 @@
+"use client"
+
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 import { TflasProduct, Tproduct } from "@/Types/Types";
 
 const FlasAndProduct = ({ data, Sectiontitle, route }: TflasProduct) => {
   return (
-    <>
+  
       <div className="my-20">
         <div className="flex justify-between w-full">
           <p className="text-transparent  bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600  text-2xl sm:text-3xl font-bold mb-8">
@@ -31,7 +33,7 @@ const FlasAndProduct = ({ data, Sectiontitle, route }: TflasProduct) => {
           ))}
         </div>
       </div>
-    </>
+ 
   );
 };
 

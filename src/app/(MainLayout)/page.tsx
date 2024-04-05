@@ -29,7 +29,7 @@ const HomePage = async () => {
   const tradingData = TrandingData.slice(0, 8);
 
   return (
-    <div>
+    <>
       <HeroSection />
       <div className="w-[90%] sm:w-[95%] md:w-[90%] lg:w-[95%] xl:w-full max-w-[1370px]  mx-auto">
         <FlasAndProduct
@@ -44,7 +44,7 @@ const HomePage = async () => {
           route={"/dishwashing-items/?category=&price=&rating="}
         />
       </div>
-    </div>
+    </>
   );
 };
 
