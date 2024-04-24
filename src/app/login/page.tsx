@@ -1,11 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+import { loginUser } from "@/Services/Auth/loginUser";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-
-
-const ResisterPage = () => {
+const loginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   type Inputs = {
@@ -13,14 +13,13 @@ const ResisterPage = () => {
     password: any;
   };
 
-  const {
-    register,
-    handleSubmit,
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
- 
-  }
+  const { register, handleSubmit } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async(data) => {
+    try {
+      const res = await loginUser(data);
+      console.log(res);
+    } catch (err) {}
+  };
   return (
     <div className="container max-w-full mx-auto h-[100dvh]">
       <div className="font-sans">
@@ -39,13 +38,11 @@ const ResisterPage = () => {
 
                 <form className="mt-t" onSubmit={handleSubmit(onSubmit)}>
                   <div className="mx-auto max-w-lg">
-        
                     <div className="py-2">
-                      <span className="px-1 text-sm text-gray-600">
-                        Email
-                      </span>
+                      <span className="px-1 text-sm text-gray-600">Email</span>
                       <input
-                        placeholder="Email" type="email"
+                        placeholder="Email"
+                        type="email"
                         {...register("email", { required: true })}
                         className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
                       />
@@ -56,7 +53,7 @@ const ResisterPage = () => {
                       </span>
                       <div className="relative">
                         <input
-                        {...register("password", { required: true })}
+                          {...register("password", { required: true })}
                           placeholder="password"
                           type={showPassword ? "text" : "password"}
                           className="text-md block px-3 py-2 rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"
@@ -89,16 +86,18 @@ const ResisterPage = () => {
                         </span>
                       </label>
                       <label className="block text-gray-500 font-bold my-4">
-                      <Link href={'/resister'}
-                         
+                        <Link
+                          href={"/resister"}
                           className="cursor-pointer tracking-tighter text-black border-b-2 border-gray-200 hover:border-gray-400"
                         >
-                         <span>Resister Now ?</span>
-                         </Link>
-                      
+                          <span>Resister Now ?</span>
+                        </Link>
                       </label>
                     </div>
-                    <button className="mt-3 text-lg font-semibold bg-gray-800 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-black" type="submit">
+                    <button
+                      className="mt-3 text-lg font-semibold bg-gray-800 w-full text-white rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-black"
+                      type="submit"
+                    >
                       Login
                     </button>
                   </div>
@@ -112,4 +111,4 @@ const ResisterPage = () => {
   );
 };
 
-export default ResisterPage;
+export default loginPage;

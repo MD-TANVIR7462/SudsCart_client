@@ -21,3 +21,8 @@ export type SearchParams = {
   price: string;
   rating: string;
 };
+export type Inputs = {
+  name: string;
+  email: string;
+  password: any;
+};

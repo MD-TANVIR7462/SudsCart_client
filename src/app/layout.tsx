@@ -21,12 +21,11 @@ export default function RootLayout({
       <body className="bg-gray-200/70">
         <main>
           <Providers>
-          <>
-          <Toaster position="top-center" />
-          {children}
-          </>
-            
-            </Providers>
+            <>
+              <Toaster position="top-center" />
+              {children}
+            </>
+          </Providers>
         </main>
       </body>
     </html>

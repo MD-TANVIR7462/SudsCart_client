@@ -1,9 +1,7 @@
 "use server"
-type Inputs = {
-    name: string;
-    email: string;
-    password: any;
-  };
+
+import { Inputs } from "@/Types/Types";
+
 export const registerUser = async(userData:Inputs) => {
     
     const res = await fetch("http://localhost:5000/api/v1/register", {

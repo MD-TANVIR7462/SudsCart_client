@@ -1,5 +1,5 @@
 "use client";
-import { registerUser } from "@/Services/actions/registerUser";
+import { registerUser } from "@/Services/Auth/registerUser";
 import { CloudCog } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
