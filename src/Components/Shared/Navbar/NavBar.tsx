@@ -6,6 +6,7 @@ import {
   NavbarMenu,
   NavbarContent,
   NavbarItem,
+  Button,
 } from "@nextui-org/react";
 
 import Link from "next/link";
@@ -68,16 +69,16 @@ export default function NavBar({
         ))}
       </NavbarContent>
 
-      {/* <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
+      <NavbarContent justify="end">
+        {/* <NavbarItem className="hidden lg:flex">
+          <Link href="/login ">Login</Link>
+        </NavbarItem> */}
         <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
+          <Button as={Link} color="primary" href="/login" variant="flat">
+          Login
           </Button>
         </NavbarItem>
-      </NavbarContent> */}
+      </NavbarContent>
 
       <NavbarMenu>
         {menuItems.map((item, index) => (

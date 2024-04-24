@@ -18,7 +18,8 @@
     "react-hook-form": "^7.51.3",
     "react-slick": "^0.30.2",
     "sharp": "^0.33.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sonner": "^1.4.41"
   },
   "devDependencies": {
     "@types/node": "^20",

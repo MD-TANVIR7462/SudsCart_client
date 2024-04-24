@@ -6,7 +6,7 @@ import React from "react";
 
 const HomePage = async () => {
   const flashProducts = await fetch(
-    "https://dishwasing-server.vercel.app/api/v1/flashproduct",
+    "http://localhost:5000/api/v1/flashproduct",
     {
       next: {
         revalidate: 30,
@@ -16,7 +16,7 @@ const HomePage = async () => {
   const FlashData = await flashProducts.json();
 
   const trandingProducts = await fetch(
-    "https://dishwasing-server.vercel.app/api/v1/topRatedProducts",
+    "http://localhost:5000/api/v1/topRatedProducts",
     {
       next: {
         revalidate: 30,
