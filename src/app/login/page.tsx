@@ -1,23 +1,32 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
+import { storeUserInfoinLocalStorage } from "@/Services/Auth/Auth.servicec";
 import { loginUser } from "@/Services/Auth/loginUser";
+import { CloudHail } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { toast } from "sonner";
 
 const loginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const router = useRouter();
   type Inputs = {
     email: string;
     password: any;
   };
 
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = async(data) => {
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       const res = await loginUser(data);
-      console.log(res);
+      if (res.token) {
+        const storeData = storeUserInfoinLocalStorage(res.token);
+        toast.success("Login successful");
+        router.push("/");
+      }
     } catch (err) {}
   };
   return (

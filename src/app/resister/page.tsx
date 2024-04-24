@@ -1,4 +1,6 @@
 "use client";
+import { storeUserInfoinLocalStorage } from "@/Services/Auth/Auth.servicec";
+import { loginUser } from "@/Services/Auth/loginUser";
 import { registerUser } from "@/Services/Auth/registerUser";
 import { CloudCog } from "lucide-react";
 import Link from "next/link";
@@ -24,8 +26,12 @@ const ResisterPage = () => {
     try{
       const res = await registerUser(data);
       if (res.success && res.data.acknowledged) {
+        console.log(res);
         toast.success(res.message)
-        router.push("/login")   
+        if (res.access_token) {
+          const storeData = storeUserInfoinLocalStorage(res.access_token);
+          router.push("/");
+        }
     } 
     if(res.success === false){
         toast.error(res.message)
